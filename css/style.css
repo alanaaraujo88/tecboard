@@ -1,0 +1,175 @@
+
+/*
+padding - como se fosse a margem em volta do próprio objeto
+border - se o objeto tiver uma borda, o border é a largura da borda
+margin - é a margem em volta do objeto, ou seja, a distância entre o objeto e os outros objetos
+*/
+
+/* Definição de fonts */
+@font-face{ /*@ é para importar*/
+   font-family: "Unbounded";
+   src: url("../fonts/Unbounded-Bold.ttf");
+   format("truetype");
+   font-weight: 700;
+   font-style: normal; /*poderia ser italic por exemplo*/
+   font-display: swap; /*se a font selecionada estiver demorando par carregar, o navegador vai usar a de fallback (alternativa) antes*/
+}
+
+@font-face{ /*@ é para importar*/
+   font-family: "Poppins";
+   src: url("../fonts/Poppins-Regular.ttf");
+   format("truetype");
+   font-weight: 400;
+   font-style: normal; /*poderia ser italic por exemplo*/
+   font-display: swap; /*se a font selecionada estiver demorando par carregar, o navegador vai usar a de fallback (alternativa) antes*/
+}
+
+@font-face{ /*@ é para importar*/
+   font-family: "Poppins";
+   src: url("../fonts/Poppins-SemiBold.ttf");
+   format("truetype");
+   font-weight: 400;
+   font-style: normal; /*poderia ser italic por exemplo*/
+   font-display: swap; /*se a font selecionada estiver demorando par carregar, o navegador vai usar a de fallback (alternativa) antes*/
+}
+
+
+/* Reset */
+*{ /* o asterisco significa que vai pegar todos os elementos da página e aplicar o que estiver nas chaves */
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; /* faz com que o padding e a borda não aumentem o tamanho do elemento */
+}
+/* Reset CSS de Eric Meyer - versão reduzida */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+header img{
+   display: block;
+   margin: 75px 0 0 360px;
+}
+
+
+body{
+   background-color: #0E1014;
+   color:#F5F5F5;
+}
+
+/*definição de classe
+   .cor-branca{
+      color: #F5F5F5;
+   }
+*/
+
+span{
+   color:#9747FF;
+}
+
+h1{
+   font-size: 64px;
+   font-family: "Unbounded", sans-serif;
+    
+    /*
+    font-family: arial,helvetica, sans-serif;
+    pode ser colocdo 3 parametros que geram hierarquia. se não tiver arial, usa helvetica, se não tiver, usa sans-seif*/
+   /*
+   serif - fontes com serifas, ou seja, com traços no final das letras
+   sans-serif - fontes sem serifas, ou seja, sem traços no final das letras
+   monospace - fontes com espaçamento fixo, ou seja, todas as letras ocupam o mesmo espaço
+   cursive - fontes com estilo de escrita à mão
+   fantasy - fontes com estilo de fantasia, ou seja, com desenhos e formas diferentes
+
+   */
+   letter-spacing: 1px;
+   text-align: center;
+   margin-top: 60px;
+}
+p{
+   font-size: 24px;
+   color:#F5F5F5;
+   font-family: "Poppins", sans-serif;
+   text-align: center;
+   margin: 24px auto 0;
+   width: 792px;
+}
+/*imagem, link e outros são renderizados inline, ou seja, não ocupam uma linha inteira. para que ocupem uma linha inteira, é necessário colocar display:block; e com isos vc nao pode definir altura e largura*/
+
+a{
+   font-size: 24px;
+   color:#F5F5F5;
+   font-family: "Poppins", sans-serif;
+   text-decoration: none; /* remove o sublinhado do link */
+   background-color: #9747FF;
+   width: 340px;
+   height: 66px;
+   display: block;
+   text-align: center; /*alinha o texto no centro do elemento*/
+   line-height: 66px; /*alinha o texto no centro do elemento verticalmente*/
+   border-radius: 36px; /*arredonda os cantos do elemento*/
+   /*padding-top: 12px;
+   padding-bottom: 12px;
+   padding-left: 24px;
+   padding-right: 24px;*/
+   margin: 40px auto; /*nesse caso, está sendo definida a margim top e bottom e as lateriais está automatica de acordo com o navegador mantendo entralizado*/
+}
+a:hover{
+   background-color: #8233E8;
+}
+
+section img{
+   display: block;
+   width: 100%;
+   width: 792px;
+   height: 446px;
+   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+   header img{
+      margin: 65px 0 0 60px;
+   }
+   p{
+      width: 648px;
+   }
+}
+
+@media (max-width: 375px) {
+   header img{
+      margin: 32px 0 0 16px;
+   }
+   h1{
+      font-size: 40px;
+   }
+   p{
+      width: 340px;
+      font-size: 20px;
+   }
+   a{
+      width: 251px;
+      height: 66px;
+      font-size: 20px;
+      font-family: "Poppins", semibold, sans-serif;
+   }
+   section img{
+      width: 340px;
+      height: 230px;
+   }
+}
